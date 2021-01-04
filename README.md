@@ -32,9 +32,9 @@ Create your own bot using online editor [Repl](https://repl.it/~) and python lan
 
 ## Create three file in repl: ##
 
-  - In [main.py](https://github.com/MaRauder111/Discord_bot/blob/main/encourage_bot/keep_alive.py) the bot is created using python.
+  - In [main.py](https://github.com/MaRauder111/Discord-Bot/blob/main/Basic-Bot/main.py) the bot is created using python.
 
-  - In [keep_alive.py](https://github.com/MaRauder111/Discord_bot/blob/main/encourage_bot/keep_alive.py) to keep the bot alive.
+  - In [keep_alive.py](https://github.com/MaRauder111/Discord-Bot/blob/main/Basic-Bot/keep_alive.py) to keep the bot alive.
 
   - You need to create a .env file where you will add the bot link. *Waring* You should not share the code to anyone. Copy the code from [discord developer](https://discord.com/developers/applications) Bot -> Build-A-Bot -> Token -> Copy. Again this copy link should not be shared to anyone.
 
