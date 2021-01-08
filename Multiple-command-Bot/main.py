@@ -11,14 +11,14 @@ async def on_ready():
   print(f'{bot.user.name} has connected to Discord!')
 
 #check ping
-@bot.command(pass_context=True)
+@bot.command()
 async def ping(ctx):
   await ctx.send(f'My ping is {bot.latency}!')
 
 #say hello
-@bot.command(pass_context=True)
+@bot.command()
 async def hello(ctx):
-  await ctx.send('hello')
+  await ctx.send('Hello I am multiple command bot')
 
 #clear chat
 @bot.command()
