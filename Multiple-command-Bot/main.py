@@ -18,7 +18,7 @@ async def ping(ctx):
 #say hello
 @bot.command()
 async def hello(ctx):
-  await ctx.send('Hello I am multiple command bot')
+  await ctx.send('Hello I am Basic Bot')
 
 #clear chat
 @bot.command()
@@ -31,10 +31,10 @@ async def slap(ctx, members: commands.Greedy[discord.Member], *, reason='no reas
     slapped = ", ".join(x.name for x in members)
     await ctx.send('{} just got slapped for {}'.format(slapped, reason))
 
-#weather
+#weather 
 @bot.command()
 async def weather(ctx):
-  res = requests.get("http://api.openweathermap.org/data/2.5/weather?q=Imphal&appid=Use_your_own_weather_api&units=metric")
+  res = requests.get("http://api.openweathermap.org/data/2.5/weather?q=Imphal&appid=9e0178fab64e38d2603e1190e328a208&units=metric")
   data = res.json()
   temp = data['main']['temp']
   await ctx.channel.send(temp)
@@ -65,6 +65,23 @@ async def server(ctx):
 
     await ctx.send(embed=embed)
 
+@bot.command(aliases=['m'])
+@commands.has_permissions(kick_members = True)
+async def mute(ctx, member : discord.Member,reason="Wathi"):
+  muted_role = ctx.guild.get_role(856781503900024893)
+
+  await member.add_roles(muted_role)
+
+  await ctx.send(member.mention + " has been muted")
+
+@bot.command(aliases=['um'])
+@commands.has_permissions(kick_members = True)
+async def unmute(ctx, member : discord.Member,reason="Wathi"):
+  muted_role = ctx.guild.get_role(856781503900024893)
+
+  await member.remove_roles(muted_role)
+
+  await ctx.send(member.mention + " has been unmuted")
 
 keep_alive()
 bot.run(os.getenv('TOKEN'))
