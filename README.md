@@ -56,6 +56,6 @@ Ping the bot using [Uptimerobot](https://uptimerobot.com/).
  Thanks to [freecodecamp](https://www.youtube.com/watch?v=SPTfmiYiuok), [freecodecamp tutorial](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/).
  
  
-### Second Bot
+## Second Bot ##
 
 [Multiple-command-Bot](https://github.com/MaRauder111/Discord-Bot/tree/main/Multiple-command-Bot) it is written with [discord.py](https://discordpy.readthedocs.io/en/stable/)
